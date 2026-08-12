@@ -15,10 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function toggleMenu(open) {
     const isOpen = open ?? !navLinks.classList.contains('open');
+    if (isOpen) navBackdrop.style.display = 'block';
     navLinks.classList.toggle('open', isOpen);
     navBurger.classList.toggle('active', isOpen);
     navBackdrop.classList.toggle('active', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (!isOpen) {
+      setTimeout(() => {
+        if (!navBackdrop.classList.contains('active')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
   }
 
   navBurger.addEventListener('click', () => toggleMenu());
@@ -219,7 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!lightbox || index < 0 || index >= galleryItemsList.length) return;
     currentIndex = index;
     renderLightboxMedia();
-    lightbox.classList.add('active');
+    lightbox.style.display = 'flex';
+    requestAnimationFrame(() => {
+      lightbox.classList.add('active');
+    });
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
@@ -229,7 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.classList.remove('active');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    mediaContainer.innerHTML = '';
+    setTimeout(() => {
+      if (!lightbox.classList.contains('active')) {
+        lightbox.style.display = 'none';
+        mediaContainer.innerHTML = '';
+      }
+    }, 300);
   }
 
   function renderLightboxMedia() {

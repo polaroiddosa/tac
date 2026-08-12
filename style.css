@@ -303,9 +303,10 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
   z-index: 999;
   opacity: 0; pointer-events: none;
   visibility: hidden;
+  display: none;
   transition: opacity var(--transition-normal), visibility var(--transition-normal);
 }
-.nav-backdrop.active { opacity: 1; pointer-events: all; visibility: visible; }
+.nav-backdrop.active { opacity: 1; pointer-events: all; visibility: visible; display: block; }
 
 /* ===== HERO ===== */
 .hero {
@@ -1102,16 +1103,19 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
   position: fixed;
   inset: 0;
   z-index: 2000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s var(--ease-out);
+  visibility: hidden;
+  transition: opacity 0.3s var(--ease-out), visibility 0.3s var(--ease-out);
 }
 .lightbox.active {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 .lightbox__backdrop {
   position: absolute;

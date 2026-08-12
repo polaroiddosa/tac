@@ -1292,7 +1292,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
 /* ===== NATIONAL RECOGNITION (OPTION 1) ===== */
 .achievement {
   padding: 5rem 0;
-  background: linear-gradient(180deg, var(--clr-night-bg) 0%, rgba(26, 36, 43, 0.6) 100%);
+  background: linear-gradient(180deg, var(--clr-night) 0%, rgba(26, 36, 43, 0.6) 100%);
   position: relative;
 }
 .achievement__card {
@@ -1373,7 +1373,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
   -webkit-text-fill-color: transparent;
 }
 .achievement__desc {
-  color: var(--clr-text-muted);
+  color: var(--clr-gray-300);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -1399,7 +1399,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
 }
 .achievement__highlight-lbl {
   font-size: 0.75rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-gray-300);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

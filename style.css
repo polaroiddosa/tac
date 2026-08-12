@@ -302,9 +302,10 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--ff-heading); font-weight: 700; line-heigh
   background: rgba(0,0,0,0.6);
   z-index: 999;
   opacity: 0; pointer-events: none;
-  transition: opacity var(--transition-normal);
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
 }
-.nav-backdrop.active { opacity: 1; pointer-events: all; }
+.nav-backdrop.active { opacity: 1; pointer-events: all; visibility: visible; }
 
 /* ===== HERO ===== */
 .hero {

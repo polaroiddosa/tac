@@ -4,8 +4,8 @@
   "description": "Disconnect from the screen and reconnect with organic forms. TAC Architects Camp at LEAD College Autonomous.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#1db954",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "assets/hero.png",

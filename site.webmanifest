@@ -1,0 +1,16 @@
+{
+  "name": "TAC Design Community — The Architects Camp",
+  "short_name": "TAC Camp",
+  "description": "Disconnect from the screen and reconnect with organic forms. TAC Architects Camp at LEAD College Autonomous.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#1db954",
+  "icons": [
+    {
+      "src": "assets/hero.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

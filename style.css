@@ -76,7 +76,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   color: var(--clr-white);
-  background: #ffffff;
+  background: var(--clr-night);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;

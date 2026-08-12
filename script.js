@@ -296,19 +296,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== VIDEO AUTOPLAY ASSURANCE =====
-  const galleryVideos = document.querySelectorAll('.gallery__item video');
-  galleryVideos.forEach(vid => {
-    vid.muted = true;
-    vid.play().catch(() => {});
-  });
-
-  // ===== BODY FADE IN =====
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.5s ease';
-  window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-    galleryVideos.forEach(vid => vid.play().catch(() => {}));
-  });
-
 });
